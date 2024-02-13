@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bestilling av kinobiletter</title>
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<table>
+
+
+    <section>
+        <h1>Bestilling av kinobilletter</h1>
+        <label for="film">Velg film: </label>
+        <select id="film">vel
+            <option>Velg film her</option>
+            <option>The Family Plan</option>
+            <option>Oppenheimer</option>
+            <option>Napoleon</option>
+            <option>Wonka</option>
+        </select>
+    </section>
+
+    <tr>
+        <td>Antall</td>
+        <td><input onblur="validerAntall(this.value, 'feilmelding')"></td>
+    </tr>
+
+    <tr>
+        <td>Navn</td>
+        <td><input onchange="valideringNavn(this.value,'feilNavn')" type="text" id="navn">
+            <span id="FeilNavn" style="color: red"></span>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>Etternavn</td>
+        <td><input type="text" id="etternavn">
+            <span id="feilEtternavn" style="color: red"></span>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>Telefonnr</td>
+        <td><input type="number" id="telefonnr">
+            <span id="feilTelefonnr" style="color: red"></span>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Epost</td>
+        <td><input type="text" id="epost">
+            <span id="feilEpost" style="color: red"></span>
+        </td>
+    </tr>
+
+    <tr>
+    <tr><td><button onclick="kjopBilett()">Kjøp bilett</button></td></tr>
+    </tr>
+
+
+</table>
+<h3>Alle billetter</h3>
+</body>
+</html>
