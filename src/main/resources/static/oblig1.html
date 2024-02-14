@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Bestilling av kinobiletter</title>
-    <script src="index.js"></script>
+    <script src="oblig1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
 <table>
 
-
     <section>
         <h1>Bestilling av kinobilletter</h1>
         <label for="film">Velg film: </label>
-        <select id="film">vel
+        <span id="filmError"></span>
+        <select id="film">
             <option>Velg film her</option>
             <option>The Family Plan</option>
             <option>Oppenheimer</option>
@@ -22,15 +22,22 @@
         </select>
     </section>
 
-    <tr>
-        <td>Antall</td>
-        <td><input onblur="validerAntall(this.value, 'feilmelding')"></td>
-    </tr>
+    <br>
 
     <tr>
+        <td>Antall</td>
+        <td><input style="width: 30px" min="0" type="number" id="antall")>
+        <span id="feilAntall" style="color: red"></span>
+        </td>
+    </tr>
+<tr>
+    <td>
+    </td>
+</tr>
+    <tr>
         <td>Navn</td>
-        <td><input onchange="valideringNavn(this.value,'feilNavn')" type="text" id="navn">
-            <span id="FeilNavn" style="color: red"></span>
+        <td><input type="text" id="navn">
+            <span id="feilNavn" style="color: red"></span>
 
         </td>
     </tr>
@@ -45,24 +52,31 @@
 
     <tr>
         <td>Telefonnr</td>
-        <td><input type="number" id="telefonnr">
+        <td><input onchange="valTelefonnr()" type="text" id="telefonnr">
             <span id="feilTelefonnr" style="color: red"></span>
         </td>
     </tr>
 
     <tr>
         <td>Epost</td>
-        <td><input type="text" id="epost">
+        <td><input onchange="valEpost()" type="text" id="epost">
             <span id="feilEpost" style="color: red"></span>
         </td>
     </tr>
 
     <tr>
-    <tr><td><button onclick="kjopBilett()">Kjøp bilett</button></td></tr>
+    <tr><td><button onclick="kjopBillett()">Kjøp bilett</button></td></tr>
     </tr>
 
 
 </table>
-<h3>Alle billetter</h3>
+
+<h2>Alle billetter</h2>
+<button onclick="slettBillett()">Slett alle bilettene</button>
+<div id="button">
+<br>
+
+</div>
+
 </body>
 </html>
