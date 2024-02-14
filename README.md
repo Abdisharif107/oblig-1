@@ -4,7 +4,7 @@ OsloMet brukernavn: absha0154
 
 GitHub brukernavn: Abdisharif107
 
-Github repo URL: https://github.com/data1700-v23/oblig-1-Abdisharif107.git
+Github repo URL: https://github.com/Abdisharif107/oblig-1.git
 
 Fullt navn: Abdi Azis Alinor Sharif
 
