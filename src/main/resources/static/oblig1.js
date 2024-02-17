@@ -15,7 +15,7 @@ function kjopBillett() {
         return;
     }
 
-    let innholdAvBilletten = billetter.length; // legger til lengden av billetten
+    let innholdAvBilletten = billetter.length; // legger til verdien av billetten
     const billett = {
         film: document.getElementById("film").value,
         antall: document.getElementById("antall").value,
@@ -47,7 +47,6 @@ function kjopBillett() {
     }
     tekstFilm += "</table>"
     document.getElementById("slettBillet").innerHTML = tekstFilm;
-
 
 function validerInput(){
         let valid = true;
@@ -81,7 +80,6 @@ function validerInput(){
         }
     return valid;
 }
-
     document.getElementById("film").value = "";
     document.getElementById("antall").value = "";
     document.getElementById("navn").value = "";
